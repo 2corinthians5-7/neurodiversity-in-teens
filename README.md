@@ -1,3 +1,0 @@
-# NDT
-
-# yapayapayapa
