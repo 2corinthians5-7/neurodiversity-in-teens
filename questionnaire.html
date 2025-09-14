@@ -2,8 +2,10 @@
 <head>
     <meta charset="utf-8">
     <title>questionnaire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="questionnaire.css">
-    <script src="test.js"></script>
 </head>
 <body>
 
@@ -146,42 +148,60 @@
     </script>
     <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
     <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
-  
-    <header id="top">
-        <h1 id="heading">Neurodiversity questionnaire</h1>
-    </header>
-    <main id="main">
-        <div id="question-display-top">
-        <div id="question-number-display">
-            <p id="question-number">1</p>
-        </div>
-        <div id="question-display">
-            <p id="question">Do you have neurodiversity?</p>
-        </div>
-    </div>
-        <div id="question-middle-bottom-display">
-            <div id="mcq-display">
-                <ul id="mcq">
-                    <li class="mcq-choice">
-                        <input type="checkbox" id="one">
-                        <label for="one" id="one-label" class="q-label">Yes</label>
-                    </li>
-                    <li class="mcq-choice">
-                        <input type="checkbox" id="two">
-                        <label for="two" id="two-label" class="q-label">No</label>
-                    </li>
-                </ul>
+    <div id="everything-div">
+        <header id="top">
+            <h1 id="heading">Neurodiversity questionnaire</h1>
+        </header>
+        <main id="main">
+            <div id="question-display-top">
+            <div id="question-number-display">
+                <p id="question-number">1</p>
             </div>
-            <div id="question-picker">
-                <div id="previous-question">
-                    <p>Previous</p>
-                </div>
-                <div id="next-question">
-                    <p>Next</p>
-                </div>
+            <div id="question-display">
+                <p id="question"></p>
             </div>
-    </div>
+        </div>
+            <div id="question-middle-bottom-display">
+                <div id="mcq-display">
+                    <ul id="mcq">
+                        <li>
+                            <input type="radio" id="1" class="radioClass" name="Question0">
+                            <label for="1" id="1-label">Yes</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="2" class="radioClass" name="Question0">
+                            <label for="2" id="2-label">No</label>
+                        </li>
+                    </ul>
+                </div>
+                <div id="question-picker">
+                    <div id="previous-button">
+                        <p>Previous</p>
+                    </div>
+                    <div id="next-button">
+                        <p>Next</p>
+                    </div>
+                </div>
+        </div>
+        <div id="about-survey-display">
+            <h3 id="about-survey-heading">
+                About Survey
+            </h3>
+            <p id="about-survey-intro">
+                This questionnaire is created by global perspectives <br>
+                students who would like to hear your thoughts on <br>
+                neurodivergent people. <br>
+            </p>
+            <p id="about-survey-info">
+                Neurodivergent people are people who process <br>
+                information differently than others <br>
+                in their age group. Examples could be people <br>
+                with ADHD, Autism, tourettes, et cetera. <br>
+            </p>
+        </div>
     </main>
+    </div>
+    <script src="questionnaire.js"></script>
 </body>
 
 <!--We're at step 'set up the sample'-->

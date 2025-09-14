@@ -1,10 +1,42 @@
 body{
-    background-color: #d4d4d4;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color:#B1E18C;
+    font-family: "Bitcount Grid Double", system-ui;
     color:#ffffff;
     display:flex;
     align-items:center;
     flex-direction:column;
+}
+
+#everything-div{
+    display:flex;
+    flex-direction:column;
+}
+
+@keyframes fadeInAndBounce {
+    0% {
+        opacity:0.5;
+        scale:0.9;
+    }
+    50% {
+        opacity:0.8;
+        scale:1.05;
+    }
+    100% {
+        opacity:1;
+        scale:1;
+    }
+}
+
+@keyframes spin{
+    0%{
+        rotate:0deg;
+    }
+    50%{
+        rotate:202deg;
+    }
+    100%{
+        rotate:405deg;
+    }
 }
 
 #top{
@@ -12,10 +44,12 @@ body{
     flex-direction:row;
     justify-content:center;
     align-items:center;
-    background-color:#3b3b3b;
-    width:700px;
+    color:#3b6b54;
+    font-size:20px;
+    width:850px;
     height:70px;
-    margin:65px 0px 20px 0px;
+    margin:40px 0px 20px 0px;
+    animation:fadeInAndBounce 400ms ease-out;
 }
 
 #heading{
@@ -27,28 +61,33 @@ body{
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    background-color:#3b3b3b;
     width:850px;
-    height:100px;
+    height:700px;
 }
 
 #question-display-top{
     display:flex;
     flex-direction:row;
+    animation:fadeInAndBounce 400ms ease-out;
 }
 
 #question-number-display{
     display:flex;
-    background-color:#646464;
+    background-color:#3b6b54;
     align-items:center;
     justify-content:center;
-    width:80px;
-    height:80px;
+    width:75px;
+    height:75px;
+    border:solid white 2px;
+    border-radius:10px;
     rotate:45deg;
+    animation:spin 600ms ease-out;
 }
 
 #question-number{
     rotate:-45deg;
+    font-size:30px;
+    color:#d8f2c4;
 }
 
 #question-display{
@@ -56,60 +95,108 @@ body{
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    background-color:#5a5a5a;
+    background-color:#3b6b54;
+    color:#ffffff;
     width:600px;
-    height:50px;
+    height:80px;
     font-size:25px;
-    margin:0px 0px 0px 70px;
+    border-radius:10px;
+    border:solid white 2px;
+    margin:0px 0px 0px 50px;
+}
+
+#question{
+    font-size:15px;
 }
 
 #question-middle-bottom-display{
     display:flex;
-    flex-direction:column-reverse;
+    flex-direction:column;
 
 }
 
 #mcq-display{
     display:flex;
-    position:absolute;
-    right:245px;
-    top:290px;
-    background-color:#838383;
+    background-color:#286748;
     flex-direction:column;
     width:600px;
     height:200px;
-    margin:20px;
+    margin:20px 0px 0px 130px;
+    border: 2px #ffffff solid;
+    border-radius:3px;
+    animation:fadeInAndBounce 400ms ease-out;
 }
 
 #mcq{
     list-style:none;
 }
 
+.submitButtonClass{
+    background-color:white;
+    font-family:"Bitcount Grid Double";
+}
+
 .mcq-choice{
     font-size:20px;
+    color:#ddc0d4;
 }
 
 #question-picker{
     display:flex;
-    position:absolute;
-    bottom:100px;
-    right:220px;
-    color:white;
+    justify-content:space-between;
+    color:#e4bfd9;
+    margin:10px 0px 0px 0px;
+    padding:0px 0px 0px 130px;
 }
 
-#previous-question{
+#previous-button{
     display:flex;
     justify-content:center;
-    background-color:black;
-    margin-right:550px;
-    width:80px;
-    height:50px;
+    align-items:center;
+    background-color:#244434;
+    width:70px;
+    height:40px;
+    padding:0px 5px 0px 5px;
+    border: 2px #ffffff solid;
+    font-size:12px;
 }
 
-#next-question{
+#next-button{
     display:flex;
     justify-content:center;
-    background-color:black;
-    width:80px;
-    height:50px;
+    align-items:center;
+    background-color:#244434;
+    width:70px;
+    height:40px;
+    padding:0px 5px 0px 5px;
+    border: 2px #ffffff solid;
+    font-size:13px;
+}
+
+#previous-button:hover{
+    background-color:#427a5e;
+    scale:1.1;
+}
+
+#next-button:hover{
+    background-color:#427a5e;
+    scale:1.1;
+}
+
+#previous-button:active{
+    background-color:#243c30;
+    scale:0.9;
+}
+
+#next-button:active{
+    background-color:#243c30;
+    scale:0.9;
+}
+
+#about-survey-display{
+    display:flex;
+    flex-direction:column;
+    width:850px;
+    color:#571f45;
+    margin:100px 0px 0px 0px;
 }
