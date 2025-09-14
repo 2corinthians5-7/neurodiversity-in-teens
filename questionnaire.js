@@ -101,8 +101,12 @@ const Question2 = new Choice(
     "No I haven't"]
 );
 
-const Question3 = new Choice();
+const Question3 = new Choice(
+    "Good job completing this! :D"
+);
 const questionStorage = [Question1, Question2, Question3];
+const amountOfQuestions = questionStorage.length;
+console.log(amountOfQuestions);
 
 questionText.textContent = Question1.q;
 
@@ -113,14 +117,20 @@ nextButton.addEventListener('click',(e)=>{
         mcq.innerHTML = '';
         mcqDisplay.appendChild(mcq);
         questionNumber.textContent = Number(questionNumber.textContent) + 1;
-        let currentQuestion = questionStorage[Number(questionNumber.textContent)-1];
-        questionText.textContent = currentQuestion.q;
-        if(currentQuestion.mcq){
-            createQuestion(currentQuestion,mcq,"mcq");
-        } else if (currentQuestion.scq) {
-            createQuestion(currentQuestion,mcq,"scq");
+        if(Number(questionNumber.textContent) <= amountOfQuestions){
+            let currentQuestion = questionStorage[Number(questionNumber.textContent)-1];
+            questionText.textContent = currentQuestion.q;
+            if(currentQuestion.mcq){
+                createQuestion(currentQuestion,mcq,"mcq");
+            } else if (currentQuestion.scq) {
+                createQuestion(currentQuestion,mcq,"scq");
+            } else {
+                createQuestion(currentQuestion,mcq,"text");
+            }
         } else {
-            createQuestion(currentQuestion,mcq,"text");
+            const magicWord = document.createElement("p");
+            magicWord.textContent = "The code is 'abcd' ";
+            mcq.appendChild(magicWord);
         }
     }
 });
@@ -132,10 +142,12 @@ previousButton.addEventListener('click',(e)=>{
         questionNumber.textContent = Number(questionNumber.textContent) - 1;
         const currentQuestion = questionStorage[Number(questionNumber.textContent)-1];
         questionText.textContent = currentQuestion.q;
-        if(currentQuestion.mcq || currentQuestion.scq){
-            createQuestion(currentQuestion,mcq,true);
+        if(currentQuestion.mcq){
+            createQuestion(currentQuestion,mcq,"mcq");
+        } else if (currentQuestion.scq) {
+            createQuestion(currentQuestion,mcq,"scq");
         } else {
-            createQuestion(currentQuestion,mcq,false);
+            createQuestion(currentQuestion,mcq,"text");
         }
     }
 });
