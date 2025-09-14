@@ -1,0 +1,1 @@
+const mcq = document.getElementById("mcq");
