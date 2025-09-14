@@ -116,8 +116,8 @@ nextButton.addEventListener('click',(e)=>{
     if(approvedAnswer()){
         mcq.innerHTML = '';
         mcqDisplay.appendChild(mcq);
-        questionNumber.textContent = Number(questionNumber.textContent) + 1;
-        if(Number(questionNumber.textContent) <= amountOfQuestions){
+        if(Number(questionNumber.textContent)+1 <= amountOfQuestions){
+            questionNumber.textContent = Number(questionNumber.textContent) + 1;
             let currentQuestion = questionStorage[Number(questionNumber.textContent)-1];
             questionText.textContent = currentQuestion.q;
             if(currentQuestion.mcq){
