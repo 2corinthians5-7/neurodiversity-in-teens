@@ -1,3 +1,14 @@
+/*
+NOTES
+BUGS LEFT
+Full name input at the start disappears.
+
+FEATURES LEFT
+Add all the questions
+Change the design
+Connect the data into Google Sheets.
+*/
+
 const questionText = document.getElementById("question");
 const mcqDisplay = document.getElementById("mcq-display");
 const previousButton = document.getElementById("previous-button");

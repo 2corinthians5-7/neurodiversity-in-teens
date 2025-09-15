@@ -5,7 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="test.css">
+    <link rel="stylesheet" type="text/css" href="questionnaire.css">
 </head>
 <body>
 
@@ -22,8 +22,8 @@
       /* exported handleSignoutClick */
 
       // TODO(developer): Set to client ID and API key from the Developer Console
-      const CLIENT_ID = '<YOUR_CLIENT_ID>';
-      const API_KEY = '<YOUR_API_KEY>';
+      const CLIENT_ID = '693721912794-itl9t0onaeo8slvfbrcm4p8v136kh1at.apps.googleusercontent.com';
+      const API_KEY = 'AIzaSyCUstwYDlO5bcLS2EpEWMrucix9ikuL93c';
 
       // Discovery doc URL for APIs used by the quickstart
       const DISCOVERY_DOC = 'https://sheets.googleapis.com/$discovery/rest?version=v4';
@@ -165,12 +165,7 @@
                 <div id="mcq-display">
                     <ul id="mcq">
                         <li>
-                            <input type="radio" id="1" class="radioClass" name="Question0">
-                            <label for="1" id="1-label">Yes</label>
-                        </li>
-                        <li>
-                            <input type="radio" id="2" class="radioClass" name="Question0">
-                            <label for="2" id="2-label">No</label>
+                            <input type="text" id="1" class="textboxClass" name="Question0">
                         </li>
                     </ul>
                 </div>
@@ -201,7 +196,7 @@
         </div>
     </main>
     </div>
-    <script src="test.js"></script>
+    <script src="questionnaire.js"></script>
 </body>
 
 <!--We're at step 'set up the sample'-->
