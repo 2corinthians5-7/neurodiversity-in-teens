@@ -6,10 +6,31 @@ const questionNumberDisplay = document.getElementById("question-number-display")
 const questionNumber = document.getElementById("question-number");
 const shortAns = 80;
 const longAns = 300;
+const datalogForNow = [];
 
 function approvedAnswer(){
-
-    return true;
+    questionNumberAsInteger = Number(questionNumber.textContent);
+    const mcq = document.getElementById("mcq");
+    console.log(questionNumberAsInteger);
+    if (questionNumberAsInteger >= questionStorage.length){
+        return true;
+    }
+    else if(mcq.firstElementChild.firstElementChild.type=='text' && mcq.firstElementChild.firstElementChild.value != ""){
+        return true;
+    } else if (mcq.firstElementChild.firstElementChild.type=='radio'){
+        for(i = 0; i < mcq.childElementCount; i++){
+            if(mcq.children[i].firstElementChild.checked == true){
+                return true;
+            }
+        }
+        console.log(mcq.children[i].firstElementChild.checked);
+    } else if (mcq.firstElementChild.firstElementChild.type=='checkbox') {
+        for(i = 0; i < mcq.childElementCount; i++){
+            if(mcq.children[i].firstElementChild.checked == true){
+                return true;
+            }
+        }
+    }
 }
 
 function createQuestion(currentQuestion,mcq,questionType){
@@ -82,13 +103,35 @@ class Choice{
 //choice will be the answer
 
 const Question1 = new Choice(
+    "Enter your full name",
+    false,
+    false,
+    shortAns,
+    false
+)
+
+const Question2 = new Choice(
+    "Click the category that resonates with you.",
+    false,
+    true,
+    false,
+    [
+        "Year 7",
+        "Year 8-9",
+        "IGCSE student",
+        "IB student",
+        "Teacher/staff"
+    ]
+)
+
+const Question3 = new Choice(
     "Are you neurodivergent?",
     false,
     true,
     false,
     ["Yes","No"]);
 
-const Question2 = new Choice(
+const Question4 = new Choice(
     "Have you met anyone neurodivergent? If yes, where?",
     true,
     false,
@@ -101,10 +144,10 @@ const Question2 = new Choice(
     "No I haven't"]
 );
 
-const Question3 = new Choice(
+const Question5 = new Choice(
     "Good job completing this! :D"
 );
-const questionStorage = [Question1, Question2, Question3];
+const questionStorage = [Question1, Question2, Question3, Question4, Question5];
 const amountOfQuestions = questionStorage.length;
 console.log(amountOfQuestions);
 
@@ -116,8 +159,8 @@ nextButton.addEventListener('click',(e)=>{
     if(approvedAnswer()){
         mcq.innerHTML = '';
         mcqDisplay.appendChild(mcq);
-        if(Number(questionNumber.textContent)+1 <= amountOfQuestions){
-            questionNumber.textContent = Number(questionNumber.textContent) + 1;
+        questionNumber.textContent = Number(questionNumber.textContent) + 1;
+        if(Number(questionNumber.textContent) <= amountOfQuestions){
             let currentQuestion = questionStorage[Number(questionNumber.textContent)-1];
             questionText.textContent = currentQuestion.q;
             if(currentQuestion.mcq){
