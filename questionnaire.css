@@ -1,202 +1,179 @@
 body{
-    background-color:#B1E18C;
-    font-family: "Bitcount Grid Double", system-ui;
-    color:#ffffff;
-    display:flex;
+    font-family: 'Pixelify Sans', 'Oswald', Arial;
+    background-image:url("assets/celestial_background_two.png");
+    justify-content:center;
+    flex-direction:column;
     align-items:center;
-    flex-direction:column;
+    margin-top:50px;
 }
 
-#everything-div{
-    display:flex;
-    flex-direction:column;
-}
-
-@keyframes fadeInAndBounce {
-    0% {
-        opacity:0.5;
-        scale:0.9;
-    }
-    50% {
-        opacity:0.8;
-        scale:1.05;
-    }
-    100% {
-        opacity:1;
-        scale:1;
-    }
-}
-
-@keyframes spin{
+@keyframes spin {
     0%{
         rotate:0deg;
-    }
-    50%{
-        rotate:202deg;
-    }
-    100%{
-        rotate:405deg;
+    } 100% {
+        rotate:360deg;
     }
 }
 
-#top{
+#main-header{
+    color:#000000;
+}
+
+#main-display{
     display:flex;
     flex-direction:row;
-    justify-content:center;
-    align-items:center;
-    color:#3b6b54;
-    font-size:20px;
-    width:850px;
-    height:70px;
-    margin:40px 0px 20px 0px;
-    animation:fadeInAndBounce 400ms ease-out;
 }
 
-#heading{
-    font-weight:normal;
-}
-
-#main{
+.display-box{
     display:flex;
     flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    width:850px;
-    height:700px;
-}
-
-#question-display-top{
-    display:flex;
-    flex-direction:row;
-    animation:fadeInAndBounce 400ms ease-out;
-}
-
-#question-number-display{
-    display:flex;
-    background-color:#3b6b54;
-    align-items:center;
-    justify-content:center;
-    width:75px;
-    height:75px;
-    border:solid white 2px;
+    border:rgb(255, 255, 255) 1px solid;
     border-radius:10px;
-    rotate:45deg;
-    animation:spin 600ms ease-out;
+    /*background: linear-gradient(#3f5788ac, #3f4662 50%, #8a7b7a 100%);*/
+    margin:10px;
+    padding:20px;
 }
 
-#question-number{
-    rotate:-45deg;
-    font-size:30px;
-    color:#d8f2c4;
-}
-
-#question-display{
+#left-display{
     display:flex;
     flex-direction:column;
-    align-items:center;
+}
+
+#topic-title-display{
+    width:440px;
+    height:60px;
+    background-image:url('assets/title_display_background.png');
+    background-size:101%;
+    background-position-y:2px;
+    background-position-x:8px;
     justify-content:center;
-    background-color:#3b6b54;
-    color:#ffffff;
+    align-items:center;
+    margin-left:27px;
+    margin-bottom:20px;
+}
+
+#key-points-display{
+    width:440px;
+    height:356px;
+    background-image:url('assets/key_points_display_background.png');
+    background-size:101%;
+    background-position-y:-0px;
+    background-position-x:0px;
+    padding:10px;
+    margin-left:30px;
+}
+
+#key-points-display-border{
+    width:530px;
+    height:430px;
+    background-image:url('assets/key-points-border.png');
+    background-size:100%;
+    background-position-y:-5px;
+    background-position-x:0px;
+    position:absolute;
+    bottom:77px;
+}
+
+#key-points-sub-header{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:160px;
+    margin-top:40px;
+}
+
+#research-display{
     width:600px;
-    height:80px;
-    font-size:25px;
-    border-radius:10px;
-    border:solid white 2px;
-    margin:0px 0px 0px 50px;
+    height:480px;
+    background-image:url("assets/research_display_background.png");
+    background-size:105%;
+    background-position-y:-20px;
+    background-position-x:-15px;
+    justify-content:center;
+    align-items:center;
 }
 
-#question{
-    font-size:15px;
+.sub-header{
+    color:white;
+    text-shadow:1px -1px 5px rgb(81, 81, 81);
 }
 
-#question-middle-bottom-display{
+.body-text{
     display:flex;
-    flex-direction:column;
-
+    color:white;
+    border:none;
+    padding-left:20px;
+    justify-content:left;
+    text-shadow:1px -1px 5px rgb(81, 81, 81);
+    width:500px;
 }
 
-#mcq-display{
+#research-paragraphs-display{
+    width:560px;
+    height:410px;
+    overflow:scroll;
+}
+
+.research-paragraphs-header-display{
+    width:530px;
     display:flex;
-    background-color:#286748;
-    flex-direction:column;
-    width:600px;
-    height:200px;
-    margin:20px 0px 0px 130px;
-    border: 2px #ffffff solid;
-    border-radius:3px;
-    animation:fadeInAndBounce 400ms ease-out;
-}
-
-#mcq{
-    list-style:none;
-}
-
-.submitButtonClass{
-    background-color:white;
-    font-family:"Bitcount Grid Double";
-}
-
-.mcq-choice{
-    font-size:20px;
-    color:#ddc0d4;
-}
-
-#question-picker{
-    display:flex;
+    align-items:center;
     justify-content:space-between;
-    color:#e4bfd9;
-    margin:10px 0px 0px 0px;
-    padding:0px 0px 0px 130px;
 }
 
-#previous-button{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background-color:#244434;
-    width:70px;
-    height:40px;
-    padding:0px 5px 0px 5px;
-    border: 2px #ffffff solid;
-    font-size:12px;
+#research-sub-header{
+    display:inline;
+    padding-left:20px;
 }
 
-#next-button{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background-color:#244434;
-    width:70px;
-    height:40px;
-    padding:0px 5px 0px 5px;
-    border: 2px #ffffff solid;
-    font-size:13px;
+.apa-hyperlinks{
+    color:rgb(255, 255, 255);
 }
 
-#previous-button:hover{
-    background-color:#427a5e;
-    scale:1.1;
+#clickable-one{
+    width:50px;
+    rotate:0deg;
 }
 
-#next-button:hover{
-    background-color:#427a5e;
-    scale:1.1;
+#clickable-one:hover{
+    animation: spin 3000ms ease-in-out;
 }
 
-#previous-button:active{
-    background-color:#243c30;
-    scale:0.9;
+.clickable-component:hover{
+    transform: scale(1.1);
+    transition: 50ms ease-in-out;
+    cursor:pointer;
 }
 
-#next-button:active{
-    background-color:#243c30;
-    scale:0.9;
+.clickable-component:active{
+    transform:scale(1);
 }
 
-#about-survey-display{
+#research-paragraphs-one-display{
     display:flex;
     flex-direction:column;
-    width:850px;
-    color:#571f45;
-    margin:100px 0px 0px 0px;
+    align-items:center;
+}
+
+#dino-constellation{
+    width:300px;
+    margin:none;
+    padding:none;
+}
+
+#research-paragraphs-four-list{
+    display:flex;
+    flex-direction:column;
+}
+
+#credits-banner{
+    width:500px;
+    margin-left:20px;
+    border-radius:30px;
+    margin-bottom:30px;
+}
+
+#right-display{
+    display:flex;
+    flex-direction:column;
 }
