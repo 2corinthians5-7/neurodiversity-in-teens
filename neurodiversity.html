@@ -17,9 +17,16 @@
                 <h3 class="sub-header">Neurodiversity in Minors</h3>
             </div>
                 <div id="key-points-display" class="display-box">
-                    <h3 id="key-points-sub-header" class="sub-header">Key points</h3>
-                    <p id="key-points-paragraph" class="body-text">
-                    </p>
+                    <h3 id="key-points-sub-header" class="sub-header">Easter egg counter</h3>
+                    <ol id="easter-egg-list" class="body-text">
+                        <li id="easter-egg-one"> Tsar bot</li>
+                        <li id="easter-egg-two"> Dino png</li>
+                        <li id="easter-egg-three"> Constellation stuff</li>
+                        <li id="easter-egg-four"> References</li>
+                        <li id="easter-egg-five"> Survey</li>
+                        <li id="easter-egg-six"> Secret</li>
+                    </ol>
+                    <p id="easter-egg-paragraph" class="body-text">Click the easter egg when you find it!<br></p>
             </div>
         </div>
         <div id="right-display">
@@ -27,29 +34,39 @@
                 <div id="research-paragraphs-display">
                     <div id="research-paragraphs-header-display-one" class="research-paragraphs-header-display">
                         <h3 id="research-sub-header-one" class="sub-header">What is Neurodiversity?</h3>
-                        <img src="assets/clickable-one.png" id="clickable-one" class="clickable-component">
+                        <img src="assets/clickable-one.png" id="clickable-one" class="clickable-component" onclick="tsarClicked()">
                     </div>
 
                     <div id="research-paragraphs-one-display">
                     <p id="research-paragraph-one" class="body-text">
                         <a href="https://images.dawn.com/news/1194104/sania-saeed-says-most-pakistanis-arent-equipped-to-be-parents-due-to-lack-of-mental-health-awareness" class="apa-hyperlinks clickable-component" target="_blank">[1] </a>
-                         Having neurodiversity makes someone’s brain function differently from the typical brain.
+                        Neurodiversity is when a persons brain works differently than others.
+
+                        <br><br> Neurodiversity, sometimes called special needs, is when someones mind works in special ways. 
+
+                        <br><br> This may include finding writing or reading harder than other classmates, being unable to 'read the room' --in extreme ways, or even, not being able to recognize faces (also in an extreme extent).
+
+                        <br><br> Neurodiversity is not curable, hence it is not like depression or anxiety disorders. They are uncontrollable in most cases, thus everyone should treat people with special needs like normal people.
+
+                        <br><br> Our aim in this article-like website is to bring you understanding to special people around you and how to treat them like a good person.
                     </p>
-                    <img src="assets/dino-constellation.webp" id="dino-constellation">
+                    <img src="assets/dino-constellation.webp" id="dino-constellation" onclick="dinoClicked()">
                     </div>
 
-                    <p id="research-paragraph-two" class="body-text">
-                        <a href="https://www.annafreud.org/news/neurodivergent-adolescents-experience-twice-the-emotional-burden-at-school/" class="apa-hyperlinks clickable-component" target="_blank">[2]</a> 30-40% of people have neurodiversity, and in Hong Kong, 
-                        <a href="https://www.contemporarypediatrics.com/view/understanding-neurodiversity-what-every-parent-and-pediatrician-should-know-when-it-comes-to-your-child-s-brain-development" class="apa-hyperlinks clickable-component" target="_blank">[3]</a> there are 10-20% of people worldwide who have neurodiversity.
-                    </p>
-
-                    <p id="research-paragraph-three" class="body-text">
-                        There are different types of neurodiversity, for example, autism, ADHD and tourettes. 
-                    </p>
+                    <div id="research-paragraph-two-three-display">
+                        <p id="research-paragraph-two" class="body-text">
+                            <a href="https://www.annafreud.org/news/neurodivergent-adolescents-experience-twice-the-emotional-burden-at-school/" class="apa-hyperlinks clickable-component" target="_blank">[2]</a> In Hong Kong, 30-40% of people have neurodiversity.
+                            <a href="https://www.contemporarypediatrics.com/view/understanding-neurodiversity-what-every-parent-and-pediatrician-should-know-when-it-comes-to-your-child-s-brain-development" class="apa-hyperlinks clickable-component" target="_blank">[3]</a> there are 10-20% of people worldwide who have neurodiversity.
+                        </p>
+    
+                        <p id="research-paragraph-three" class="body-text">
+                            There are different types of neurodiversity, for example, autism, ADHD and tourettes. 
+                        </p>
+                    </div>
 
                     <div id="research-paragraphs-four-display">
                         <p id="research-paragraphs-four" class="body-text"><a href="" class="apa-hyperlinks clickable-component" target="_blank">[4]</a>
-                            People with autism may act like the following:
+                            Autism spectrum disorder, or autism, is one of the more commonly seen special need. People with autism may act like the following:
                        </p>
                         <ul id="research-paragraphs-four-list" class="body-text">
                             <li>
@@ -62,12 +79,15 @@
                                 Constant repetition of the same actions (in a methodical manner).
                             </li>
                         </ul>
+                        <p class="body-text">
+                            As autism is a spectrum, there are wayyyyyy different kinds of traits.
+                        </p>
                     </div>
                     <p id="research-paragraphs-five" class="body-text">
-                        <a href="https://www.qld.gov.au/disability/children-young-people/bullying/bullying-disability-mental-health" class="apa-hyperlinks clickable-component" target="_blank">[5]</a> People with ADHD would not be able to keep focus, hyperactivity and impulsivity.
+                        <a href="https://www.qld.gov.au/disability/children-young-people/bullying/bullying-disability-mental-health" class="apa-hyperlinks clickable-component" target="_blank">[5]</a> People with ADHD would not be able to keep focus, they may inherit traits of hyperactivity and impulsivity.
                     </p>
                     <p id="research-paragraphs-six" class="body-text">
-                        People with tourettes would have both motor and vocal tics which occur several times a day and it’s uncontrollable. 
+                        People with tourettes would have both motor and vocal tics which occur several times a day and it’s uncontrollable.
                     </p>
 
                     <div id="research-paragraphs-header-two-display">
@@ -75,18 +95,93 @@
                             Bullying the neurominority
                         </h3>
                         <p id="research-paragraph-seven" class="body-text">
-                            <a href="https://www.qld.gov.au/disability/children-young-people/bullying/bullying-disability-mental-health" class="apa-hyperlinks clickable-component" target="_blank">[5]</a> Having a disability can make children and teens a higher chance being a target of bullies
+                            <a href=”https://www.qld.gov.au/disability/children-young-people/bullying/bullying-disability-mental-health” target=”_blank” class="apa-hyperlinks clickable-component">[13]</a>Having a disability can make children and teens a higher chance of being a target of bullies, 62% of students with autism spectrum disorder report being <span style="color:rgb(243, 219, 219);" onclick="secretClicked()">bullied</span> once a week or more. And it can harm them in many ways, including their self-esteem, mental health, social skills and school progress. 
+                            <a href=”https://raisingchildren.net.au/autism/behaviour/common-concerns/bullying-asd” target=”_blank” class="apa-hyperlinks clickable-component">[12]</a>
+                        </p>
+
+                        <p id="research-paragraph-eight" class="body-text">
+                            The best way to not accidentally hurt people with special needs is to acknowledge that these things are normal and is okay. +1000 social credits <a href=”https://www.forbes.com/sites/jenniferpalumbo/2024/08/26/how-to-address-bullying-of-neurodivergent-children/” target=”_blank” class="apa-hyperlinks clickable-component">[8]</a>
+                        </p>
+                        <svg width="430" height="200" id="constellation-component">
+                            <circle cx="10" cy="10" r="5" id="star-one" class="star" onclick="starClicked()"></circle>
+                            <circle cx="103" cy="103" r="6" id="star-two" class="star" onclick="starClicked()"></circle>
+                            <circle cx="230" cy="150" r="7" id="star-three" class="star" onclick="starClicked()"></circle>
+                            <circle cx="340" cy="183" r="10" id="star-four" class="star" onclick="starClicked()"></circle>
+                            <circle cx="121" cy="180" r="5" id="star-five" class="star" onclick="starClicked()"></circle>
+                            <circle cx="380" cy="100" r="5" id="star-six" class="star" onclick="starClicked()"></circle>
+                            <circle cx="80" cy="60" r="8" id="star-six" class="star" onclick="starClicked()"></circle>
+                        </svg>
+                        <p id="constellation-component-text-one" class="body-text constellation-text">
+                            Neurodiverse students have a higher chance of getting anxiety or depression. <a href=”https://www.annafreud.org/news/neurodivergent-adolescents-experience-twice-the-emotional-burden-at-school/” target=”_blank” class="apa-hyperlinks clickable-component">[10]</a>
+                        </p>
+                        <p id="constellation-component-text-two" class="body-text constellation-text">
+                            People with special needs have difficulties dealing with feelings.
+                        </p>
+                        <p id="constellation-component-text-three" class="body-text constellation-text">
+                            Compared to their classmates, people who have special needs may feel things more deeply.
+                        </p>
+                        <p id="constellation-component-text-four" class="body-text contellation-text">
+                            You should treat unique students by not insulting what they can't control, otherwise they might feel like an outcast.
+                        </p>
+                        <p id="constellation-component-text-five" class="body-text constellation-text">
+                            According to professionals, there is a lack of resources for understanding neurodiversity in medical school, even as pediatricians there’s very little focus on mental wellness, they don’t pair medication with therapy to meet the needs of the children, they also have limited time to interact with the patient. <a href=”https://www.contemporarypediatrics.com/view/understanding-neurodiversity-what-every-parent-and-pediatrician-should-know-when-it-comes-to-your-child-s-brain-development” target=”_blank” class="apa-hyperlinks clickable-component">[11]</a>
+                        </p>
+                        <p id="constellation-component-text-six" class="body-text constellation-text">
+                            May 15 - June 15 is recognised as the Tourette Association Awareness Month. <a href=”https://fixel.ufhealth.org/2023/05/12/tourette-awareness-month/” target=”_blank” class="apa-hyperlinks clickable-component">[14]</a>
                         </p>
                     </div>
 
-                    <div id="research-paragraphs-header-display-two" class="research-paragraphs-header-display">
-                        <h3 id="research-sub-header" class="sub-header">References & Sources</h3>
+                    <div id="research-header-display-two" class="research-paragraphs-header-display">
+                        <h3 class="sub-header">Organizations</h3>
                     </div>
-                    <img src="assets/credits-banner.webp" id="credits-banner" class="clickable-component">
+                    <ul class="body-text">
+                        <li>
+                            The Institute of Neurodiversity (ION) <a href=”https://ioneurodiversity.org/about-us/” target=”_blank” class="apa-hyperlinks clickable-component">[15]</a> (global organisation)
+                        </li>
+                        <li>
+                            The Neurodiversity Association Hong Kong <a href=”https://www.ndahk.com” target=”_blank” class="apa-hyperlinks clickable-component">[16]</a> (Hong Kong organisation)
+                        </li>
+                        <li>
+                            Anti-bullying <a href=”https://www.antibullyingpro.com/support-and-advice-articles/neurodiversity-and-bullying-behaviour” target=”_blank” class="apa-hyperlinks clickable-component">[17]</a>
+                        </li>
+                    </ul>
+
+                    <div id="research-header-display-three" class="research-paragraphs-header-display">
+                        <h3 class="sub-header">How special needs are treated</h3> <!--Survey results-->
+                    </div>
+                    <p id="research-display-nine" class="body-text">
+                        Throughout our survey, we have found that people above KS3 (not including KS3) tend to ignore neurodiversity and normalizes involuntary activities. However, for KS3, our data has shown lower levels of empathy and kindness, where some would even express their 'annoyance' and how they would tease the neurodivergent.
+                    </p>
+
+                    <p id="research-display-ten" class="body-text">
+                        We have interviewed several people across KCCIS. The first person we interviewed was someone with Asperger's syndrome, they have shared their positive experience in secondary school however unpleasant situation during their Primary school experience. This goes on to show that younger kids lack understanding of neurodiversity.
+                        <br><br>For the second and third interviewee, we have met with the <a target="_blank" href="https://youtube.com/shorts/vKUg6BiRyDo?si=DyrjopBtE7hbKZbC" class="apa-hyperlinks">school's counsellor</a> & <a href="https://youtube.com/shorts/gfk0W3On1NY?si=EcPiIYfghY0mfx4T" target="_blank" class="apa-hyperlinks">Mr. Trio</a>.
+
+                    </p>
+
+                    <div id="research-header-display-four" class="research-paragraphs-header-display">
+                        <h3 class="sub-header">Andrea from KCCIS has tourettes</h3> <!--Andrea's case study-->
+                    </div>
+                    <p id="research-display-eleven" class="body-text">
+                        Andrea has been a victim of tourettes since 5th Grade, tourettes means she frequently does repetitive movements involuntarily. This includes swearing, head jerks, and snorting, ( however ticks, actions that are due to tourettes, vary from time to time).
+
+                    </p>
+                    <p id="research-display-twelve" class="body-text">
+                        She has faced a lot of bullying from friends, classmates, and even teachers. Discrimination in this case included name calling, telling her to ‘shut up’, and getting warnings from teachers for something she did not do intentionally.
+                    </p>
+
+                    <p id="research-display-thirteen" class="body-text">
+                        This case is an example of how you should not treat people with neurodiversity. Instead, she has told us that she preferred if others did not bring much attention to her special needs.
+                    </p>
+
+                    <div id="research-paragraphs-header-display-five" class="research-paragraphs-header-display">
+                        <h3 class="sub-header">References & Sources</h3>
+                    </div>
+                    <p id="survey-link-paragraph" onclick="surveyClicked()"><a href="https://forms.gle/ADxfKmFHAYgmFQk18" target="_blank" id="survey-link">Survey</a></p>
+                    <img src="assets/credits-banner.webp" id="credits-banner" class="clickable-component" onclick="referenceClicked()">
             </div>
             </div>
         </div>
-        <div id="key-points-display-border"></div> <!--Assign this properly.-->
         <audio id="minecraft-music" autoplay>
             <source src="assets/minecraft.mp3" type="audio/mp3">
         </audio>

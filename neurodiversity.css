@@ -15,6 +15,31 @@ body{
     }
 }
 
+@keyframes star-shine{
+    0%{
+        stroke:rgba(255, 255, 255, 0);
+        stroke-width:10px;
+        color:#ffffff;
+        text-shadow:1px -1px 5px rgba(81, 81, 81, 1);
+    } 50%{
+        stroke:rgba(255, 255, 255, 0.5);
+    }  
+    100%{
+        stroke:rgba(255, 255, 255, 1);
+    }
+}
+
+@keyframes dino-shine{
+    0%{
+        opacity:0.2;
+    }
+    50%{
+        opacity:1;
+    } 100%{
+        opacity:0.2;
+    }
+}
+
 #main-header{
     color:#000000;
 }
@@ -30,8 +55,8 @@ body{
     border:rgb(255, 255, 255) 1px solid;
     border-radius:10px;
     /*background: linear-gradient(#3f5788ac, #3f4662 50%, #8a7b7a 100%);*/
-    margin:10px;
     padding:20px;
+    margin:20px;
 }
 
 #left-display{
@@ -40,55 +65,50 @@ body{
 }
 
 #topic-title-display{
-    width:440px;
-    height:60px;
+    width:400px;
+    height:40px;
     background-image:url('assets/title_display_background.png');
     background-size:101%;
     background-position-y:2px;
     background-position-x:8px;
     justify-content:center;
     align-items:center;
-    margin-left:27px;
-    margin-bottom:20px;
+    margin-left:100px;
 }
 
 #key-points-display{
-    width:440px;
-    height:356px;
-    background-image:url('assets/key_points_display_background.png');
-    background-size:101%;
+    display:flex;
+    justify-content:left;
+    width:400px;
+    height:300px;
+    background-image:url('assets/key-points-display-background-2.png');
+    background-size:100%;
     background-position-y:-0px;
     background-position-x:0px;
-    padding:10px;
-    margin-left:30px;
-}
-
-#key-points-display-border{
-    width:530px;
-    height:430px;
-    background-image:url('assets/key-points-border.png');
-    background-size:100%;
-    background-position-y:-5px;
-    background-position-x:0px;
-    position:absolute;
-    bottom:77px;
+    margin-left:100px;
+    padding:20px;
 }
 
 #key-points-sub-header{
     display:flex;
-    justify-content:center;
+    justify-content:right;
     align-items:center;
-    width:160px;
+    width:200px;
     margin-top:40px;
 }
 
+#easter-egg-list{
+    margin-left:10px;
+    font-size:16px;
+}
+
 #research-display{
-    width:600px;
-    height:480px;
+    width:530px;
+    height:420px;
     background-image:url("assets/research_display_background.png");
     background-size:105%;
-    background-position-y:-20px;
-    background-position-x:-15px;
+    background-position-y:-12px;
+    background-position-x:-17px;
     justify-content:center;
     align-items:center;
 }
@@ -96,38 +116,42 @@ body{
 .sub-header{
     color:white;
     text-shadow:1px -1px 5px rgb(81, 81, 81);
+    display:inline;
+    padding-left:20px;
+}
+
+#research-sub-header-one{
+    display:inline;
 }
 
 .body-text{
-    display:flex;
+    display:inline-block;
     color:white;
     border:none;
     padding-left:20px;
     justify-content:left;
     text-shadow:1px -1px 5px rgb(81, 81, 81);
-    width:500px;
+    font-size:15px;
+    width:430px;
 }
 
 #research-paragraphs-display{
-    width:560px;
-    height:410px;
+    width:500px;
+    height:380px;
     overflow:scroll;
 }
 
 .research-paragraphs-header-display{
-    width:530px;
+    width:480px;
+    height:70px;
     display:flex;
     align-items:center;
     justify-content:space-between;
 }
 
-#research-sub-header{
-    display:inline;
-    padding-left:20px;
-}
-
 .apa-hyperlinks{
     color:rgb(255, 255, 255);
+    display:inline;
 }
 
 #clickable-one{
@@ -159,6 +183,18 @@ body{
     width:300px;
     margin:none;
     padding:none;
+    opacity:0.2;
+}
+
+#dino-constellation:hover{
+    opacity:1;
+    animation:dino-shine 2000ms ease-in-out;
+    animation-iteration-count:infinite;
+}
+
+#research-paragraphs-two-three-display{
+    display:flex;
+    flex-direction:row;
 }
 
 #research-paragraphs-four-list{
@@ -166,8 +202,52 @@ body{
     flex-direction:column;
 }
 
+#constellation-component{
+    margin-left:20px;
+}
+
+.star{
+    fill:white;
+}
+
+.star:hover{
+    animation: star-shine 1000ms ease-in;
+}
+
+.star:active{
+    fill:rgb(146, 213, 255);
+    stroke:rgb(190, 230, 255);
+    stroke-width:5px;
+}
+
+#constellation-text-one{
+    color:rgba(255, 255, 255, 0);
+}
+
+#survey-link-paragraph{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:20px;
+    border:solid white 3px;
+    background-color:black;
+    width:100px;
+    height:40px;
+    margin-left:20px;
+}
+
+#survey-link{
+    text-decoration:none;
+    color:white;
+}
+
+#survey-link:hover{
+    scale:1.1;
+    box-shadow:2px 2px 5px rgba(0,0,0,0.5);
+}
+
 #credits-banner{
-    width:500px;
+    width:400px;
     margin-left:20px;
     border-radius:30px;
     margin-bottom:30px;
