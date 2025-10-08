@@ -1,9 +1,9 @@
 {
-  "homepage": "https://2corinthians5-7.github.io/neurodiversity-in-teens",
   "name": "neurodiversity-in-teenagers",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://2corinthians5-7.github.io/neurodiversity-in-teens/neurodiversity-in-teenagers",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
