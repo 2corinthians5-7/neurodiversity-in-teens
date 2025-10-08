@@ -1,11 +1,7 @@
 import { useState, useEffect } from 'react';
 import '../styles/bully-page.css';
 
-interface BullyPageProps {
-  scrollProgress: number;
-}
-
-export default function BullyPage({ scrollProgress }: BullyPageProps) {
+export default function BullyPage() {
   const [slowScrollActive, setSlowScrollActive] = useState(true);
 
   useEffect(() => {

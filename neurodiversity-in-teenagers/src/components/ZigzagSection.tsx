@@ -1,6 +1,5 @@
 import '../styles/zigzag.css';
-import lilypad from '../assets/lily-pad.PNG';
-import pad from '../assets/pad.PNG'
+import * as lilypad from '../assets/lily-pad.PNG';
 
 interface ZigzagSectionProps {
   scrollProgress: number;

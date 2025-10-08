@@ -1,7 +1,7 @@
 import '../styles/three-components.css';
-import daffodil from '../assets/daffodil.PNG';
-import peony from '../assets/peony.PNG';
-import lotusTwo from '../assets/lotus-two.PNG';
+import * as daffodil from '../assets/daffodil.PNG';
+import * as peony from '../assets/peony.PNG';
+import * as lotusTwo from '../assets/lotus-two.PNG';
 
 interface ThreeComponentsSectionProps {
   scrollProgress: number;

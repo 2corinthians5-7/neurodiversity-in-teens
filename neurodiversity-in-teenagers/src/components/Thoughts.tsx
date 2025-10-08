@@ -1,6 +1,6 @@
 // components/Thoughts.tsx
 import '../styles/thoughts.css';
-import frog from '../assets/frog-pad.PNG';
+import * as frog from '../assets/frog-pad.PNG';
 
 interface ThoughtsProps {
   scrollProgress: number;

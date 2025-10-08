@@ -1,5 +1,5 @@
 import '../styles/org-page.css';
-import lotus from '../assets/lotus.PNG';
+import * as lotus from '../assets/lotus.PNG';
 
 interface OrgPageProps {
   scrollProgress: number;
@@ -7,7 +7,7 @@ interface OrgPageProps {
   pageNumber: number;
 }
 
-export default function OrgPage({ scrollProgress, variant, pageNumber }: OrgPageProps) {
+export default function OrgPage({ scrollProgress, variant }: OrgPageProps) {
   const opacity = Math.min(Math.max((scrollProgress - 2000) / 200, 0), 1);
 
   return (

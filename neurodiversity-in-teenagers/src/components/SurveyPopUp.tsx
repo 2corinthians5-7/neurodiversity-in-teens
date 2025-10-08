@@ -1,9 +1,9 @@
 // components/SurveyPopUp.tsx
 import { useState } from 'react';
 import '../styles/survey-popup.css';
-import frog from "../assets/frog-two.PNG";
-import shiny from '../assets/shiny-button.PNG';
-import sword from '../assets/sword.PNG';
+import * as frog from "../assets/frog-two.PNG";
+import * as shiny from '../assets/shiny-button.PNG';
+import * as sword from '../assets/sword.PNG';
 
 interface SurveyPopUpProps {
   isVisible: boolean;
@@ -12,7 +12,7 @@ interface SurveyPopUpProps {
 
 type GameChoice = 'rock' | 'paper' | 'scissors' | null;
 type GameResult = 'win' | 'lose' | 'tie' | null;
-type imageSources = frog | shiny | sword | null;
+type imageSources = any | null;
 
 export default function SurveyPopUp({ isVisible, onClose }: SurveyPopUpProps) {
   const [userChoice, setUserChoice] = useState<GameChoice>(null);
