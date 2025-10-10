@@ -1,0 +1,54 @@
+.org-page {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding-top:50px;
+    padding-left:200px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .org-page.imageRight .text-container {
+    order: 1;
+    width: 40%;
+  }
+  
+  .org-page.imageRight .image-container {
+    order: 2;
+    width: 60%;
+  }
+  
+  .org-page.imageLeft .text-container {
+    order: 2;
+    width: 40%;
+  }
+  
+  .org-page.imageLeft .image-container {
+    order: 1;
+    width: 60%;
+  }
+  
+  .paragraph-area {
+    width: 600px;
+    height: 220px;
+    font-size:1rem;
+    resize: none;
+    outline: none;
+  }
+
+  .sub-title{
+    font-size:2rem;
+    margin:0;
+    padding:0;
+  }
+  
+  .large-image-placeholder {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+
+  #image{
+    width:70%;
+  }

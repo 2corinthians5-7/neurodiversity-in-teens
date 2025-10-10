@@ -1,0 +1,34 @@
+.hero-section {
+    height: 100vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    background-color:#ACC2C2;
+  }
+  
+  .hero-content {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    color:#495656;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 1.5s ease-in;
+  }
+  
+  .scroll-down-text {
+    font-size: 1rem;
+    animation: fadeIn 1s ease-in 2s both;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }

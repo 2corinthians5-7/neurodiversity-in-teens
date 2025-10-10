@@ -1,0 +1,211 @@
+.bully-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: #b4c3b0;
+}
+
+.bully-page.slow-scroll {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.spider-map {
+  position: relative;
+  width: 80vw;
+  height: 80vh;
+  max-width: 1400px;
+  max-height: 900px;
+  border-radius: 12px;
+}
+
+.center-word {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+  background: #525e4e;
+  color: #90a690;
+  padding: 1.5rem 2.5rem;
+  border-radius: 5%;
+  border: 5px solid #3b483a;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  text-align: center;
+  width: 180px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bubble {
+  position: absolute;
+  border-radius:5%;
+  border: 2px solid #333;
+  background: #80937c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+.bubble:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0px 24px rgba(126, 168, 118, 1);
+}
+
+.bubble-text {
+  width: 200px;
+  height: 90px;
+  border: none;
+  background: transparent;
+  resize: none;
+  text-align: center;
+  outline: none;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: #ccdfc7;
+  font-family: inherit;
+  overflow:scroll;
+  padding:20px;
+}
+
+/* Connector 0: Center to Top Left Bubble */
+.connector-0 {
+  top: 50%;
+  left: 50%;
+  width: 25vw; /* Dynamic width based on viewport */
+  max-width: 350px;
+  transform: rotate(-45deg);
+  transform-origin: 0 0;
+}
+
+/* Connector 1: Center to Top Right Bubble */
+.connector-1 {
+  top: 50%;
+  left: 50%;
+  width: 25vw; /* Dynamic width based on viewport */
+  max-width: 350px;
+  transform: rotate(45deg);
+  transform-origin: 0 0;
+}
+
+/* Connector 2: Center to Bottom Center Bubble */
+.connector-2 {
+  top: 50%;
+  left: 50%;
+  width: 20vh; /* Dynamic height based on viewport */
+  max-width: 250px;
+  transform: rotate(90deg) translateX(-50%);
+  transform-origin: 0 0;
+}
+
+/* Animation for connectors */
+.connector {
+  animation: drawLine 1s ease-out forwards;
+  opacity: 0;
+}
+
+.connector-0 { animation-delay: 0.2s; }
+.connector-1 { animation-delay: 0.4s; }
+.connector-2 { animation-delay: 0.6s; }
+
+@keyframes drawLine {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .spider-map {
+    width: 90vw;
+    height: 70vh;
+  }
+  
+  .center-word {
+    font-size: 2rem;
+    width: 140px;
+    height: 140px;
+    padding: 1rem 1.5rem;
+  }
+  
+  .bubble {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .bubble-textarea {
+    width: 90px;
+    height: 80px;
+    font-size: 0.8rem;
+  }
+  
+  .connector-0,
+  .connector-1 {
+    width: 30vw;
+  }
+  
+  .connector-2 {
+    width: 25vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .spider-map {
+    width: 95vw;
+    height: 60vh;
+  }
+  
+  .bubble {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .bubble-textarea {
+    width: 80px;
+    height: 60px;
+    font-size: 0.7rem;
+  }
+  
+  .bubble-0 { top: 5%; left: 5%; }
+  .bubble-1 { top: 5%; right: 5%; }
+  .bubble-2 { bottom: 5%; }
+}
+
+.spider-map {
+  position: relative;
+  width: 100%;
+  height: 85%;
+  background: transparent;
+  margin: 0 auto;
+}
+
+.connectors {
+  width: 100%;
+  height: 100%;
+}
+
+.center-word {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* ... rest of center-word styles ... */
+}
+
+.bubble {
+  width:20%;
+  height:20%;
+  border: 4px solid #647461;
+}
