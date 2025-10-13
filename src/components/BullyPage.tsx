@@ -1,15 +1,22 @@
 import { useState, useEffect } from 'react';
 import '../styles/bully-page.css';
 
-export default function BullyPage() {
-  const [slowScrollActive, setSlowScrollActive] = useState(true);
+interface BullyPageProps {
+  scrollProgress: number;
+}
 
-  useEffect(() => {
+export default function BullyPage({ scrollProgress }: BullyPageProps) {
+    const [slowScrollActive, setSlowScrollActive] = useState(true);
+
+    useEffect(() => {
     const timer = setTimeout(() => {
       setSlowScrollActive(false);
     }, 4000);
     return () => clearTimeout(timer);
   }, []);
+
+  // You can now use scrollProgress if needed, but it's optional
+  console.log(scrollProgress); // This will show the scroll progress if passed
 
   // Coordinates for the SVG lines
   const centerX = 700;
