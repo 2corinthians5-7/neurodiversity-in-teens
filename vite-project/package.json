@@ -3,12 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://2corinthians5-7.github.io/neurodiversity-in-teens/vite-project",
+  "homepage": ".",
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -t"
   },
   "dependencies": {
     "react": "^19.1.1",
