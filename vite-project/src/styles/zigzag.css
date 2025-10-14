@@ -19,12 +19,23 @@
     left: 10%;
     transform:rotate(30deg);
   }
+
+  .zigzag-item.top-left p {
+    transform:rotate(330deg);
+    padding-left:40px;
+    padding-top:50px;
+  }
   
   .zigzag-item.bottom-left-middle {
     bottom: 10%;
     left: 25%;
   }
   
+  .zigzag-item.bottom-left-middle p {
+    padding-left:80px;
+    padding-top:20px;
+  }
+
   .zigzag-item.top-right-middle {
     top: 10%;
     right: 25%;
@@ -36,13 +47,16 @@
     right: 10%;
     transform:rotate(170deg);
   }
+
+  .zigzag-item.bottom-right p{
+    transform:rotate(190deg);
+    padding-right:40px;
+    padding-bottom:50px;
+  }
   
   .paragraph-area-zigzag {
     width: 200px;
     height:150px;
-    margin-top:50px;
-    padding-left:70px;
-    padding-right:20px;
     border-radius: 8px;
     resize: none;
     outline: none;
