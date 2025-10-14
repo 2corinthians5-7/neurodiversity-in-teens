@@ -12,10 +12,12 @@
     width:320px;
     height:320px;
   }
+
   
   .zigzag-item.top-left {
     top: 10%;
     left: 10%;
+    transform:rotate(30deg);
   }
   
   .zigzag-item.bottom-left-middle {
@@ -32,6 +34,7 @@
   .zigzag-item.bottom-right {
     bottom: 10%;
     right: 10%;
+    transform:rotate(170deg);
   }
   
   .paragraph-area-zigzag {
@@ -45,7 +48,7 @@
     outline: none;
     font-size: 15px;
     color:#3d5656;
-    overflow:scroll;
+    /*overflow:scroll;*/
   }
 
   .image{

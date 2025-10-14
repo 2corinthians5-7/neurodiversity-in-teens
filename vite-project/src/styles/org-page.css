@@ -1,10 +1,12 @@
 .org-page {
-    height: 90vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     padding-top:50px;
     padding-left:200px;
     transition: opacity 0.3s ease;
+    color: #9d7292;
+    background-color:#c5aec2;
   }
   
   .org-page.imageRight .text-container {

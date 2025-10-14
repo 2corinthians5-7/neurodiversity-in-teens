@@ -1,12 +1,12 @@
 .three-components-section {
-  height: 90vh; /* Reduced from 100vh */
+  height: 100vh; /* Reduced from 100vh */
   display: flex;
   align-items: center;
   transition: opacity 0.3s ease;
   width: 100%;
   padding: 0 2rem;
   box-sizing: border-box;
-  margin-bottom:300px;
+  background-color: #a3a891;
 }
 
 .components-grid {
