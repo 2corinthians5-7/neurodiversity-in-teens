@@ -5,8 +5,12 @@
   "type": "module",
   "homepage": ".",
   "scripts": {
+    "dev": "vite",
     "build": "vite build",
-    "deploy": "gh-pages -d dist -t"
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.1.1",
