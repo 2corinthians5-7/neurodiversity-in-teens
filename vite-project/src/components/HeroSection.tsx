@@ -23,7 +23,7 @@ export default function HeroSection({ scrollProgress }: HeroSectionProps) {
       <div className="hero-content">
         <h1 className="hero-title">Neurodiversity in Teenagers</h1>
         {showScrollText && (
-          <p className="scroll-down-text">scroll down</p>
+          <p className="scroll-down-text">last upadated: 15/10/2025</p>
         )}
       </div>
     </section>
