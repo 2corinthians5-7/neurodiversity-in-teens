@@ -1,19 +1,20 @@
 .three-components-section {
-  height: 100vh; /* Reduced from 100vh */
+  height: 110vh; /* Reduced from 100vh */
   display: flex;
   align-items: center;
   transition: opacity 0.3s ease;
   width: 100%;
-  padding: 0 2rem;
+  padding: 0 0rem;
   box-sizing: border-box;
   background-color: #a3a891;
+  font-family:'Roboto Slab', Arial;
 }
 
 .components-grid {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  margin-top:150px;
+  margin-top:10px;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
@@ -22,7 +23,7 @@
 }
 
 .component {
-  width: 280px;
+  width: 200px;
   min-height: 15px; /* Reduced height */
   padding: 1rem;
   background:transparent;
@@ -48,17 +49,17 @@
   justify-self: end;
 }
 
-.subtitle {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem; /* Tighter spacing */
-  color: #364040;
-}
-
 .paragraph {
   margin-bottom: 0.5rem; /* Tighter spacing */
   line-height: 1.4;
   color: #364040;
-  font-size: 0.9rem;
+  font-size: 13px;
+}
+
+.subtitle {
+  font-size: 30px;
+  margin-bottom: 0.5rem; /* Tighter spacing */
+  color: #364040;
 }
 
 .image-placeholder {
@@ -79,7 +80,7 @@
 }
 
 .image-display{
-  width:300px;
+  width:200px;
   display:flex;
   justify-content:center;
   align-items:center;

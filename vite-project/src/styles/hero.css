@@ -6,6 +6,7 @@
     align-items: center;
     transition: opacity 0.3s ease;
     background-color:#ACC2C2;
+    font-family:'Roboto Slab', Arial;
   }
   
   .hero-content {

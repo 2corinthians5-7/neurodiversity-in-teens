@@ -9,6 +9,7 @@ import Thoughts from './components/Thoughts'; // New import
 import ZigzagSection from './components/ZigzagSection';
 import Bibliography from './components/Bibliography';
 import SurveyPopUp from './components/SurveyPopUp';
+import subwooferLullaby from './assets/subwoofer-lullaby.mp3';
 
 export default function App() {
   const [currentSection, setCurrentSection] = useState(0);
@@ -65,6 +66,7 @@ export default function App() {
       <Bibliography scrollProgress={scrollProgress} />
       
       <SurveyPopUp isVisible={showSurvey} onClose={handleCloseSurvey} />
+      <audio controls src={subwooferLullaby} autoPlay={true}></audio>
     </div>
   );
 }

@@ -2,6 +2,7 @@
     height: 100vh;
     position: relative;
     transition: opacity 0.3s ease;
+    font-family:'Roboto Slab', Arial;
   }
   
   .zigzag-item {
@@ -9,8 +10,8 @@
     position: absolute;
     background-image: url('../assets/pad.PNG');
     background-size: contain;
-    width:320px;
-    height:320px;
+    width: 250px;
+    height:250px;
   }
 
   
@@ -50,17 +51,15 @@
 
   .zigzag-item.bottom-right p{
     transform:rotate(190deg);
-    padding-right:40px;
-    padding-bottom:50px;
   }
   
   .paragraph-area-zigzag {
-    width: 200px;
+    width: 250px;
     height:150px;
     border-radius: 8px;
     resize: none;
     outline: none;
-    font-size: 15px;
+    font-size: 13px;
     color:#3d5656;
     /*overflow:scroll;*/
   }

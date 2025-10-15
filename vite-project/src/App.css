@@ -4,31 +4,15 @@ html {
   scroll-snap-type: y proximity;
 }
 
-/* Scale entire website */
-html {
-  transform: scale(0.7);
-  transform-origin: top left;
-  width: 142.857%; /* 100% / 0.7 = 142.857% */
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-
 body {
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  margin: 0;
-  padding: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
   cursor:url("assets/transparent-cursor.png") auto;
+  font-family:'Roboto Slab', Arial;
 }
 
 .app {

@@ -7,6 +7,7 @@
     transition: opacity 0.3s ease;
     color: #9d7292;
     background-color:#c5aec2;
+    font-family:'Roboto Slab', Arial;
   }
   
   .org-page.imageRight .text-container {
@@ -30,15 +31,15 @@
   }
   
   .paragraph-area {
-    width: 600px;
+    width: 500px;
     height: 220px;
-    font-size:1rem;
+    font-size:15px;
     resize: none;
     outline: none;
   }
 
   .sub-title{
-    font-size:2rem;
+    font-size:20px;
     margin:0;
     padding:0;
   }
