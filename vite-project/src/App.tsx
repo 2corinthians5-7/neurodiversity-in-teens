@@ -66,7 +66,9 @@ export default function App() {
       <Bibliography scrollProgress={scrollProgress} />
       
       <SurveyPopUp isVisible={showSurvey} onClose={handleCloseSurvey} />
-      <audio controls src={subwooferLullaby} autoPlay={true}></audio>
+      <audio controls autoPlay>
+        <source src={subwooferLullaby} type="audio/mpeg"></source>
+      </audio>
     </div>
   );
 }
